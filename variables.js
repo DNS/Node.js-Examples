@@ -81,15 +81,18 @@ TestFunction(1234)
 
 // lambda
 lambda1 = function (x) {console.log('from anonymous function: ' + x)}
-lambda1('ok 1')
+lambda1('from lambda 1')
 
 lambda2 = (x) => {console.log('from anonymous function: ' + x)}
-lambda2('ok 1')
+lambda2('from lambda 2')
 
 
 // file operation
 const fs = require('fs')
-fs.writeFile('test.txt', 'hello world', {encoding:'utf8',flag:'w'}, (err)=>{})
+// fs.open() generaly not needed to write & read file
+// fs.open('test.txt', 'r', (err, fd) => { fs.close(fd) } )
+
+fs.writeFile('test.txt', 'hello world', {encoding:'utf8'}, (err)=>{})
 fs.appendFile('test.txt', ' append!!!', {encoding:'utf8'}, (err)=>{})
 fs.readFile('test.txt', {encoding:'utf8',flag:'r'}, function(err,buf){console.log(buf)})
 //fs.close()

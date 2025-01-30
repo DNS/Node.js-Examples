@@ -53,7 +53,7 @@ console.log(`precision ${s2.toFixed(2)}`)
 console.log('standard output message')
 
 // stderr
-console.err('error message')
+console.error('error message')
 
 // stdwarn
 console.warn('warning message')
@@ -77,8 +77,8 @@ lambda2('ok 1')
 
 // file operation
 const fs = require('fs')
-fs.writeFileSync('test.txt', 'hello world')
-var buf = fs.readFile('test.txt', function(){})
+fs.writeFile('test.txt', 'hello world', {encoding:'utf8',flag:'w'}, (err)=>{})
+fs.readFile('test.txt', {encoding:'utf8',flag:'r'}, function(err,buf){console.log(buf)})
 fs.close()
 
 
@@ -94,5 +94,10 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 try {
     console.log('try something')
 } catch (err) {
-    console.err('handle error')
+    console.error('handle error')
 }
+
+x = 123
+if (x) throw console.error('caught error')
+
+

@@ -12,10 +12,17 @@ const e = 0.5678
 var arr1 = [1,2,3,4]
 var arr2 = ['welcome','to','indonesia']
 
-console.log(a+b+c+d+e) 
+console.log(a+b+c+d+e)
 
 // ; statement separator
 console.log('statement'); console.log('separator');
+
+// string concatenation
+console.log(a+b+c+d+e)
+
+// string format & interpolation
+console.log(`hello ${a} ${d+e}`)
+console.log(`precision ${e.toFixed(2)}`)
 
 ////////////////////////
 
@@ -40,12 +47,7 @@ while (i < arr.length) {
 }
 
 
-// string format & interpolation
-var s1 = 'world'
-var s2 = 0.123456789
-var s3 = 888
-console.log(`hello ${s1} ${s2+s3}`)
-console.log(`precision ${s2.toFixed(2)}`)
+
 
 ////////////////////////
 

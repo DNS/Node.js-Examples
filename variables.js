@@ -9,10 +9,17 @@ let b = "world"
 c = 'welcome'
 d = 1234
 const e = 0.5678
+
+// array, list
 var arr1 = [1,2,3,4]
 var arr2 = ['welcome','to','indonesia']
 
-console.log(a+b+c+d+e)
+// hash, dictionary
+x = {'a':'b','c':'d'}
+y = {'a':[7,8,9]}
+console.log(x.a)
+console.log(y.a[2])
+
 
 // ; statement separator
 console.log('statement'); console.log('separator');
@@ -23,6 +30,9 @@ console.log(a+b+c+d+e)
 // string format & interpolation
 console.log(`hello ${a} ${d+e}`)
 console.log(`precision ${e.toFixed(2)}`)
+
+
+
 
 ////////////////////////
 
@@ -80,8 +90,9 @@ lambda2('ok 1')
 // file operation
 const fs = require('fs')
 fs.writeFile('test.txt', 'hello world', {encoding:'utf8',flag:'w'}, (err)=>{})
+fs.appendFile('test.txt', ' append!!!', {encoding:'utf8'}, (err)=>{})
 fs.readFile('test.txt', {encoding:'utf8',flag:'r'}, function(err,buf){console.log(buf)})
-fs.close()
+//fs.close()
 
 
 fs.readFile('test.txt', 'utf8', (err, data) => {
@@ -99,7 +110,6 @@ try {
     console.error('handle error')
 }
 
-x = 123
-if (x) throw console.error('caught error')
-
+// try reading file
+if (err) throw console.error('caught error')
 

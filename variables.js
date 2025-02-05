@@ -14,6 +14,9 @@ const e = 0.5678
 var arr1 = [1,2,3,4]
 var arr2 = ['welcome','to','indonesia']
 
+// array subset/slice
+arr1.slice(0,2)
+
 // hash, dictionary
 x = {'a':'b','c':'d'}
 y = {'a':[7,8,9]}

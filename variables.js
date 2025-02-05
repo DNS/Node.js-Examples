@@ -14,10 +14,21 @@ const e = 0.5678
 var arr1 = [1,2,3,4]
 var arr2 = ['welcome','to','indonesia']
 
-// array subset/slice
+// array slice/subset
 arr1.slice(0,2)
 
-// hash, dictionary
+// flatten array
+[1,2,[3,4]].flat()
+
+// flatten all depth
+[1,2,[3,4,[5,6]]].flat(Infinity)
+
+// concatenate array
+[1,2].concat(3)
+[1,2].concat([4,5])
+
+
+// hash, dictionary, key-value, JSON object
 x = {'a':'b','c':'d'}
 y = {'a':[7,8,9]}
 console.log(x.a)

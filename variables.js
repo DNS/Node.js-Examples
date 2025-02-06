@@ -1,9 +1,11 @@
 ﻿/* 
-    var -> function scope
-    let -> block scope (loop)
-    const -> constant
+    var: function scope
+    let: block scope (loop)
+    const: constant
+	without declaration: global variable
 */
 
+// variable declaration
 var a = 'hello'
 let b = "world"
 c = 'welcome'
@@ -36,9 +38,11 @@ c = [...a,...b,5,6]		// [ 1, 2, 3, 4, 5, 6 ]
 
 
 // convert iterator to array
-iterator = [1, 2, 3, 4, 5][Symbol.iterator]();
-array = [...iterator];
-console.log(array); // Output: [1, 2, 3, 4, 5]
+iterator = [1, 2, 3, 4, 5][Symbol.iterator]()
+array1 = iterator.toArray()
+array2 = [...iterator]
+console.log(array2)		// Output: [1, 2, 3, 4, 5]
+
 
 
 

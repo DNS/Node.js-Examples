@@ -27,6 +27,12 @@ arr1.slice(0,2)
 [1,2].concat(3)
 [1,2].concat([4,5])
 
+// convert iterator to array
+const iterator = [1, 2, 3, 4, 5][Symbol.iterator]();
+const array = [...iterator];
+console.log(array); // Output: [1, 2, 3, 4, 5]
+
+
 
 // hash, dictionary, key-value, JSON object
 x = {'a':'b','c':'d'}

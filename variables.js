@@ -27,9 +27,17 @@ arr1.slice(0,2)
 [1,2].concat(3)
 [1,2].concat([4,5])
 
+
+// ... "spread operator" or "rest parameter"
+a = [1,2]
+b = [3,4]
+c = [a,b,5,6]			// [ [ 1, 2 ], [ 3, 4 ], 5, 6 ]
+c = [...a,...b,5,6]		// [ 1, 2, 3, 4, 5, 6 ]
+
+
 // convert iterator to array
-const iterator = [1, 2, 3, 4, 5][Symbol.iterator]();
-const array = [...iterator];
+iterator = [1, 2, 3, 4, 5][Symbol.iterator]();
+array = [...iterator];
 console.log(array); // Output: [1, 2, 3, 4, 5]
 
 

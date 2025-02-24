@@ -1,0 +1,11 @@
+﻿
+npm install -g cordova.
+
+cordova help create
+cordova create myapp com.mycompany.myteam.myapp MyApp
+
+cordova platform
+cordova platform add [browser|android|electron]
+
+cordova run browser 
+

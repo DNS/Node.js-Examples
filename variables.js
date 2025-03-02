@@ -72,12 +72,17 @@ console.log(`precision ${e.toFixed(2)}`)
 var arr = [1,2,3,4]
 
 // for
-for (let i=0; i<arr.length; i++) {
+for (i=0; i<arr.length; i++) {
     console.log(arr[i]);
 }
 
+// for ... of ...
+for (i of arr) { console.log(i) }
+
 // forEach
-arr.forEach( function(i){console.log(i)} )
+arr.forEach( function(i) { console.log(i) } )
+arr.forEach( () => { console.log(i) } )
+
 
 console.log(arr)
 

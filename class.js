@@ -1,8 +1,12 @@
 
 
 class myclass {
-	constructor(data) {
+	constructor (data) {
 		this.data = data;
+	}
+	
+	destroy () {
+		this.data = null;
 	}
 	
 	method () {
